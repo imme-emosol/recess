@@ -31,9 +31,10 @@ Layout::input($scripts, 'Block', new HtmlBlock());
 	</head>
 	<body>
 	<div class="container">
-			<div class="span-11 header">
-				<h1>Recess Tools</h1>
-			</div>
+			<a class="span-11 header" href="<?php
+				echo $_ENV['url.base'];?>recess/">
+				<h1><?php echo Html::img( 'recess/logo.gif' , 'Recess Tools' ); ?></h1>
+			</a>
 			<div class="span-13 last">
 				<p class="qotm quiet">"Give us the tools, and we'll finish the job." ~Churchill</p>
 			</div>

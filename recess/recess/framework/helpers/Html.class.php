@@ -159,7 +159,7 @@ class Html extends AbstractHelper {
 		if(!isset($attributes['alt'])) $attributes['alt'] = '';
 		if (strpos($attributes['src'], '://') === FALSE) {
 			// Make the src attribute into an absolute URL
-			$attributes['src'] = url::asset('img/'.$attributes['src']);
+			$attributes['src'] = url::asset('images/'.$attributes['src']);
 		}
 
 		return '<img'.html::attributes($attributes).'>';
