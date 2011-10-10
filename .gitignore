@@ -3,6 +3,8 @@
 .project
 .buildpath
 *.db
+# to stop git from tracking changes to recess-conf.php also execute this cmd:
+# git update-index --assume-unchanged recess-conf.php
 recess-conf.php
 recess/temp/compiled/*
 recess/temp/*.*
