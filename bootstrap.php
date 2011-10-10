@@ -20,7 +20,12 @@ Library::import('recess.http.Environment');
 Library::import('recess.Recess');
 
 // Entry point to Recess
-Recess::main(Environment::getRawRequest(), RecessConf::$policy, RecessConf::getRoutes(), RecessConf::$plugins);
+Recess::main(
+	Environment::getRawRequest(),
+	RecessConf::$policy,
+	RecessConf::getRoutes(),
+	RecessConf::$plugins
+);
 
 // RecessConf follows...
 
@@ -188,4 +193,3 @@ abstract class RecessConf {
 	
 }
 
-?>

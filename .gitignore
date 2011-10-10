@@ -3,5 +3,8 @@
 .project
 .buildpath
 *.db
+recess-conf.php
 recess/temp/compiled/*
 recess/temp/*.*
+apps/*
+!apps/welcome

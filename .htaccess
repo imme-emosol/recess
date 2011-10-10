@@ -1,5 +1,12 @@
 Options FollowSymLinks
-RewriteEngine On
-RewriteRule ^([^.]+)$ $1.html [QSA]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ bootstrap.php [QSA,L]
+# replace /recess/ by the path to bootstrap.php ( for ErrorDocument and for RewriteBase )
+<IfModule rewrite_module>
+	RewriteEngine On
+	RewriteBase /recess/
+	RewriteRule ^([^.]+)$ $1.html [QSA]
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule .* bootstrap.php [QSA,L]
+</IfModule>
+<IfModule !rewrite_module>
+	ErrorDocument 404 /recess/bootstrap.php
+</IfModule>

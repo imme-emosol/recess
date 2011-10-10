@@ -15,7 +15,12 @@ final class Recess {
 	 * @package recess
 	 * @static 
 	 */
-	public static function main(Request $request, IPolicy $policy, RtNode $routes, array $plugins = array()) {
+	public static function main(
+		Request $request, 
+		IPolicy $policy,
+		RtNode $routes,
+		array $plugins = array()
+	) {
 		static $callDepth = 0;
 		static $calls = array();
 		$callDepth++;
